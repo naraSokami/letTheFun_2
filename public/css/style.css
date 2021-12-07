@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #181515;
+}
+
+h1 {
+  margin-top: 50px;
+  color: white;
+  text-align: center;
+  font-size: 4em;
+}
+
+.funs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.fun {
+  width: 40px;
+  height: 40px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+
+.fun .cube {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+  -webkit-animation: rotating 5s linear infinite;
+          animation: rotating 5s linear infinite;
+}
+
+.fun .cube .side {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ee2065), to(#eba075));
+  background-image: linear-gradient(to right, #ee2065, #eba075);
+}
+
+.fun .cube .side:nth-of-type(6) {
+  -webkit-transform: rotateY(0deg) translateZ(20px);
+          transform: rotateY(0deg) translateZ(20px);
+}
+
+.fun .cube .side:nth-of-type(1) {
+  -webkit-transform: rotateY(90deg) translateZ(20px);
+          transform: rotateY(90deg) translateZ(20px);
+}
+
+.fun .cube .side:nth-of-type(2) {
+  -webkit-transform: rotateY(180deg) translateZ(20px);
+          transform: rotateY(180deg) translateZ(20px);
+}
+
+.fun .cube .side:nth-of-type(3) {
+  -webkit-transform: rotateY(270deg) translateZ(20px);
+          transform: rotateY(270deg) translateZ(20px);
+}
+
+.fun .cube .side:nth-of-type(4) {
+  -webkit-transform: rotateX(90deg) translateZ(20px);
+          transform: rotateX(90deg) translateZ(20px);
+}
+
+.fun .cube .side:nth-of-type(5) {
+  -webkit-transform: rotateX(270deg) translateZ(20px);
+          transform: rotateX(270deg) translateZ(20px);
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotateY(0deg) rotateX(0deg);
+            transform: rotateY(0deg) rotateX(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg) rotateX(360deg);
+            transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -webkit-transform: rotateY(0deg) rotateX(0deg);
+            transform: rotateY(0deg) rotateX(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg) rotateX(360deg);
+            transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+.ToDoList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100%;
+  gap: 50px;
+  width: 100%;
+  padding: 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.ToDoList .List {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  text-align: center;
+  padding: 20px;
+  width: 25%;
+  min-width: 200px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ee2065), to(#eba075));
+  background-image: linear-gradient(to right, #ee2065, #eba075);
+  max-height: 500px;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.ToDoList .List h3 {
+  color: white;
+  text-transform: uppercase;
+}
+
+.ToDoList .List ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  width: 100%;
+  list-style: none;
+}
+
+.ToDoList .List li, .ToDoList .List .AddItem {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 80%;
+}
+
+.ToDoList .List .AddItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.ToDoList .List .AddItem input {
+  color: white;
+  font-size: 1.2em;
+  width: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+.ToDoList .List .AddItem input:focus {
+  outline: none;
+}
+
+.ToDoList .List .AddItem button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ee2065), to(#eba075));
+  background-image: linear-gradient(to right, #ee2065, #eba075);
+  color: white;
+  border: none;
+  font-size: 2em;
+}
+
+.Trash {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 160px;
+  left: 50%;
+  height: 120px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ee2065), to(#eba075));
+  background-image: linear-gradient(to right, #ee2065, #eba075);
+  border-radius: 50% 50% 0 0;
+}
+
+.Trash i {
+  color: white;
+  font-size: 3em;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("../../public/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "dancingScript";
+  src: url("../../public/fonts/DancingScript-Regular.ttf");
+}
+/*# sourceMappingURL=style.css.map */
