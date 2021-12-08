@@ -66,6 +66,21 @@ function ToDoList() {
         }
     }, [onElement])
 
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            setRectList(lists.map((list) => {
+                return {id: list.id, rect: document.getElementById(list.id).getBoundingClientRect()}
+            }))
+        })
+        return () => {
+            window.removeEventListener('resize', () => {
+                setRectList(lists.map((list) => {
+                    return {id: list.id, rect: document.getElementById(list.id).getBoundingClientRect()}
+                }))
+            })
+        }
+    }, [])
+
     const handleDragStart = (event) => {
 
         const itemId = _item(event.target.id)
